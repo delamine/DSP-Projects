@@ -182,7 +182,7 @@ function fs_slider_Callback(hObject, eventdata, handles)
 % Hints: get(hObject,'Value') returns position of slider
 %        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
 
-Fs = get(hObject,'Value')*100000;
+Fs = round(get(hObject,'Value'),3)*100000;
 if(Fs < 1000)
     Fs = 1000;
     set(hObject, 'Value', Fs/100000);
